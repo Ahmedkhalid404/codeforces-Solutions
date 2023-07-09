@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 5000
+int main()
+{
+    char arr[MAX];
+    scanf("%s",arr);
+    if(arr[0]>='A'&&arr[0]<='Z')
+        {
+            printf("%s",arr);
+            return 0;
+        }
+    else
+        {
+            arr[0]-=32;
+            printf("%s",arr);
+        }
+    return 0;
+}
