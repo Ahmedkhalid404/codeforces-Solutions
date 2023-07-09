@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 500
+int main()
+{
+    int sum1=0,sum2=0,size,index=1,num,mod;
+    scanf("%d",&size);
+    for(int i=0;i<size;i++)
+    {
+        sum1=sum2=0;
+        scanf("%d",&num);
+        if(num==0)
+            printf("YES\n");
+        else
+        {
+            while( num!=0 )
+        {
+            mod=num%10;
+            if(index<=3)
+                sum1+=mod;
+            else
+                sum2+=mod;
+            index++;
+            num/=10;
+        }
+        index=1;
+        if(sum1==sum2)
+            printf("YES\n");
+        else
+            printf("NO\n");
+    }
+        }
+ 
+ 
+    return 0;
+}
