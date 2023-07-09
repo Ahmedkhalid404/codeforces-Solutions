@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 5
+int main()
+{
+    int array[MAX][MAX],index,move=0,first_index_i,first_index_j;
+    for(int i=0;i<MAX;i++)
+    {
+        for(int j=0;j<MAX;j++)
+        {
+            scanf("%d",&array[i][j]);
+            if(array[i][j]!=0)
+            {
+                first_index_i=i;
+                first_index_j=j;
+            }
+        }
+    }
+    if(array[2][2]!=0)
+        {
+            printf("%d",move);
+            return 0;
+        }
+    else
+    {
+        //rows
+        if(first_index_i>2)
+        {
+            for(;first_index_i!=2;)
+            {
+                first_index_i--;
+                move++;
+            }
+        }
+        else
+        {
+            for(;first_index_i!=2;)
+            {
+                first_index_i++;
+                move++;
+            }
+        }
+        //columns
+        if(first_index_j>2)
+        {
+            for(;first_index_j!=2;)
+            {
+                first_index_j--;
+                move++;
+            }
+        }
+        else
+        {
+            for(;first_index_j!=2;)
+            {
+                first_index_j++;
+                move++;
+            }
+        }
+    }
+    printf("%d",move);
+ 
+    return 0;
+}
