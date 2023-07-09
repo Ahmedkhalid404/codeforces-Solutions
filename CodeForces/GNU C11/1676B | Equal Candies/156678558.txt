@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 500
+int main()
+{
+   int arr[MAX],rows,coulm,min,sum,dif;
+   scanf("%d",&rows);
+   for(int i=0;i<rows;i++)
+   {
+       sum=0;
+       scanf("%d",&coulm);
+       for(int j=0;j<coulm;j++)
+       {
+           scanf("%d",&arr[j]);
+       }
+       min=arr[0];
+       for(int x=1;x<coulm;x++)
+       {
+           if(arr[x]<min)
+            min=arr[x];
+       }
+       for(int y=0;y<coulm;y++)
+       {
+           dif=arr[y]-min;
+           sum+=dif;
+       }
+       printf("%d\n",sum);
+   }
+    return 0;
+}
