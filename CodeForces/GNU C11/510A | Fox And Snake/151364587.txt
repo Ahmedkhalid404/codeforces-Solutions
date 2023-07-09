@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main()
+{
+    int colume,rows,count=1,dots=1;
+    scanf("%d%d",&rows,&colume);
+    for(int i=1;i<=rows;i++){
+        if(count%2==1){
+            for(int j=1;j<=colume;j++){
+                printf("#");
+            }
+            printf("\n");
+            count++;
+        }
+        else{
+            if(dots%2==1){
+                for(int j=1;j<=colume;j++){
+                    if(j!=colume){
+                        printf(".");
+                    }
+                    else{
+                        printf("#");
+                    }
+                }
+                dots++;
+                count++;
+                printf("\n");
+            }
+            else{
+                 for(int j=1;j<=colume;j++){
+                    if(j==1){
+                        printf("#");
+                    }
+                    else{
+                        printf(".");
+                    }
+                }
+                dots++;
+                count++;
+                printf("\n");
+            }
+        }
+ 
+    }
+    return 0;
+}
