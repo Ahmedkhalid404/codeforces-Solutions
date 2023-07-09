@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main()
+{
+    char array1[]="I hate that",array2[]="I love that";
+    char array3[]="I hate it",array4[]="I love it";
+    long long int n;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        if(i!=n)
+        {
+            if(i%2)
+                printf("%s ",array1);
+            else
+                printf("%s ",array2);
+        }
+        else
+        {
+            if(i%2)
+                printf("%s",array3);
+            else
+                printf("%s",array4);
+        }
+    }
+    return 0;
+}
