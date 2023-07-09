@@ -1,0 +1,32 @@
+#include <stdio.h>
+#define MAX 500
+int main()
+{
+    long long int array[MAX][MAX],rwos,coulm;
+    scanf("%lld",&rwos);
+    for(int i=0;i<rwos;i++){
+        int result;
+        int difrent;
+        scanf("%d",&coulm);
+        for(int j=0;j<coulm;j++){
+            scanf("%lld",&array[i][j]);
+        }
+        if(array[i][0]==array[i][coulm-1])
+            difrent=array[i][0];
+        else{
+            if(array[i][0]==array[i][1])
+                difrent=array[i][0];
+            else
+                difrent=array[i][coulm-1];
+        }
+        for(int y=0;y<coulm;y++){
+            if(difrent!=array[i][y]){
+                result=y+1;
+                break;
+            }
+            }
+            printf("%d\n",result);
+ 
+    }
+    return 0;
+}
