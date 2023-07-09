@@ -1,0 +1,28 @@
+#include<stdio.h>
+#define MAX 500
+int main()
+{
+    int arr[MAX][MAX],n,sum0=0,sum1=0,sum2=0;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+        {
+       for(int j=0;j<3;j++){
+    scanf("%d",&arr[i][j]);    
+if(j==0)
+sum0+=arr[i][j];
+else if(j==1)    
+sum1+=arr[i][j];
+else
+sum2+=arr[i][j]; 
+    
+    } 
+        
+        
+        
+        }
+if(sum0==0&&sum1==0&&sum2==0)   
+printf("YES");
+else
+printf("NO");
+     return 0;
+}
